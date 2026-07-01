@@ -1,0 +1,22 @@
+# C++ compilation artifacts and executables
+a.out
+*.o
+*.so
+*.dylib
+dataset/generate
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Datasets and generated data
+data/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*~
