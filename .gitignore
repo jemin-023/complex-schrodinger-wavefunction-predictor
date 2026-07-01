@@ -4,6 +4,11 @@ a.out
 *.so
 *.dylib
 dataset/generate
+dataset/potential
+dataset/cnpy
+dataset/cnpy.cpp
+dataset/cnpy.h
+
 
 # Python caching
 __pycache__/
