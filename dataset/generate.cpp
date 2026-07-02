@@ -11,7 +11,6 @@ constexpr int N = 256;
 constexpr double xmin = -5.0;
 constexpr double xmax = 5.0;
 
-
 const double dx = (xmax - xmin)/(N - 1);
 
 int main(){
@@ -26,6 +25,8 @@ int main(){
 
         if (i < N - 1) T[i][i + 1] = inv_dx2;
     }
+
+    // === Filling the flat matrix to save it ===
     std::vector<double> flat;
 
     flat.reserve(N * N);
