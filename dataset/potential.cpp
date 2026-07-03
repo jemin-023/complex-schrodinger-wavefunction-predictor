@@ -52,7 +52,7 @@ int main(){
         flat.insert(flat.end(), V.begin(), V.end());
     }
     cnpy::npy_save(
-        "data/potentials.npy",
+        "../data/potentials.npy",
         flat.data(),
         {static_cast<size_t>(M), static_cast<size_t>(N)},
         "w"

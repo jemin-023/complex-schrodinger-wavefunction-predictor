@@ -38,7 +38,7 @@ int main(){
     }
 
     cnpy::npy_save(
-        "data/T.npy",
+        "../data/T.npy",
         flat.data(),
         {static_cast<size_t>(N), static_cast<size_t>(N)},
         "w"
