@@ -8,6 +8,9 @@ Solving the Schrödinger equation numerically (e.g., using diagonalization like 
 ## Results & Benchmark
 After training on a generated dataset of **50,000 diverse Gaussian mixture potentials**, the model successfully generalized to unseen potential structures. 
 
+![Wavefunction Visual Comparison](plots/wavefunction_comparison.png)
+![Orthogonality Matrix](plots/orthogonality.png)
+
 ### Performance (vs Scipy Traditional Solver)
 Evaluated natively on an unseen validation set of 5,000 samples:
 | Metric | Result |
