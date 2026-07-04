@@ -126,9 +126,9 @@ def main():
 
     # Save final parameters
     import pickle
-    with open("checkpoint.pkl", "wb") as pf:
+    with open("logs/checkpoint.pkl", "wb") as pf:
         pickle.dump(state.params, pf)
-    print("Saved final checkpoint to checkpoint.pkl")
+    print("Saved final checkpoint to logs/checkpoint.pkl")
 
 if __name__ == "__main__":
     main()
