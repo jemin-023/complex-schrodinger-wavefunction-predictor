@@ -157,7 +157,7 @@ constexpr int M = 10000;  // number of potentials
 
 int main(){
     // 1. load T  (256×256 flat row-major)
-    cnpy::NpyArray T_arr = cnpy::npy_load("../data/T.npy");
+    cnpy::NpyArray T_arr = cnpy::npy_load("data/T.npy");
     double* T_data = T_arr.data<double>();
 
     double e = T_data[0 * N + 1];           // off-diagonal scalar
@@ -165,7 +165,7 @@ int main(){
     for(int i = 0; i < N; i++) T_diag[i] = T_data[i * N + i];
 
     // 2. load potentials  (10000×256)
-    cnpy::NpyArray V_arr = cnpy::npy_load("../data/potentials.npy");
+    cnpy::NpyArray V_arr = cnpy::npy_load("data/potentials.npy");
     double* V_data = V_arr.data<double>();
 
     // 3. output storage
@@ -196,13 +196,7 @@ int main(){
     }
 
     // 5. save results
-    cnpy::npy_save("../data/eigenvalues.npy",
-                    all_eigenvalues.data(),
-                    {static_cast<size_t>(M), static_cast<size_t>(K)},
-                    "w");
-    cnpy::npy_save("../data/eigenvectors.npy",
-                    all_eigenvectors.data(),
-                    {static_cast<size_t>(M), static_cast<size_t>(K), static_cast<size_t>(N)},
-                    "w");
+    cnpy::npy_save("data/eigenvalues.npy", all_eigenvalues.data(), {static_cast<size_t>(M), static_cast<size_t>(K)},"w");
+    cnpy::npy_save("data/eigenvectors.npy",all_eigenvectors.data(),{static_cast<size_t>(M), static_cast<size_t>(K), static_cast<size_t>(N)},"w");
     return 0;
 }
